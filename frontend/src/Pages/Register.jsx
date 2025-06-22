@@ -67,6 +67,7 @@ function Register() {
 
     console.log("Login successful:", result.data);
     // Optionally: setUser(result.data.user);
+    getCurrentUser();
     navigate("/");
     toast.success("User Registration Successful")
 
