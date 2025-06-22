@@ -66,10 +66,13 @@ function Login() {
 
     console.log("Login successful:", result.data);
     // Optionally: setUser(result.data.user);
+    getCurrentUser();
     navigate("/");
+    toast.success("Login Successfully")
 
   } catch (error) {
     console.error("Google signup error:", error.response?.data || error.message);
+    toast.error("Login Failed")
   }
 };
 
