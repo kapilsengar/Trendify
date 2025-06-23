@@ -1,50 +1,59 @@
 import React from 'react'
 import logo from "../assets/logo.png"
+
 function Footer() {
   return (
-    <div className='w-[100%] md:h-[36vh] h-[21vh] mb-[77px] md:mb-[0px]'>
-        <div className='w-[100%] md:h-[30vh] h-[15vh]  md:mb-[0px] bg-[#dbfcfcec] flex items-center justify-center md:px-[50px] px-[5px]'>
-            <div className='md:w-[30%] w-[35%] h-[100%] flex items-start justify-center flex-col gap-[5px]  '>
-                <div className='flex items-start justify-start gap-[5px] mt-[10px] md:mt-[40px]'>
-                    <img src={logo} alt=""  className='md:w-[40px] md:h-[40px] w-[30px] h-[30px]'/>
-                    <p className='text-[19px] md:text-[20px] text-[black] '>Trendify</p>
-            
-                </div>
-                <p className='text-[15px] text-[#1e2223] hidden md:block'>Trendify is your all-in-one online shopping destination, offering top-quality products, unbeatable deals, and fast delivery—all backed by trusted service designed to make your life easier every day.</p>
-                    <p className='text-[15px] text-[#1e2223] flex md:hidden'>Fast. Easy. Reliable. OneCart Shopping</p>
+    <div className="w-full bg-[#dbfcfcec]">
+      {/* Top Section */}
+      <div className="w-full flex flex-col md:flex-row items-start justify-between px-4 md:px-12 py-6 md:py-10 gap-6">
+        
+        {/* Logo & About */}
+       <div className="w-full md:w-[30%] flex flex-col gap-2 items-center text-center">
+  <div className="flex items-center gap-2">
+    <img src={logo} alt="logo" className="w-[30px] h-[30px] md:w-[40px] md:h-[40px]" />
+    <p className="text-sm md:text-[20px] font-semibold text-black">Trendify</p>
+  </div>
+  <p className="text-xs md:text-sm text-[#1e2223] hidden md:block">
+    Trendify is your all-in-one online shopping destination, offering top-quality products, unbeatable deals, and fast delivery—all backed by trusted service designed to make your life easier every day.
+  </p>
+  <p className="text-xs text-[#1e2223] md:hidden">
+    Fast. Easy. Reliable. Trendify Shopping
+  </p>
+</div>
 
-                
-            </div>
-            <div className='md:w-[25%] w-[30%] h-[100%] flex items-center justify-center flex-col text-center'>
-                    <div className='flex items-center justify-center gap-[5px] mt-[10px] md:mt-[40px]'>
-                        <p className='text-[19px] md:text-[20px] text-[#1e2223] font-sans '>COMPANY</p>
 
-                    </div>
-                    <ul>
-                         <li className='text-[15px] text-[#1e2223] hidden md:block cursor-pointer'>Home</li>
-                        <li className='text-[15px] text-[#1e2223] cursor-pointer '>About us</li>
-                        <li className='text-[15px] text-[#1e2223] hidden md:block cursor-pointer'>Delivery</li>
-                        <li className='text-[15px] text-[#1e2223] cursor-pointer'>Privacy Policy</li>
-                    </ul>
-                </div>
-
-                <div className='md:w-[25%] w-[40%]  h-[100%] flex items-center justify-center flex-col text-center '>
-                     <div className='flex items-center justify-center gap-[5px] mt-[10px] md:mt-[40px]'>
-                        <p className='text-[19px] md:text-[20px] text-[#1e2223] font-sans '>GET IN TOUCH</p>
-
-                    </div>
-                     <ul>
-                         <li className='text-[15px] text-[#1e2223] '>+91-7451032320</li>
-                        <li className='text-[15px] text-[#1e2223] '>kapilsengar49@gmail.com</li>
-                        <li className='text-[15px] text-[#1e2223] hidden md:block'>+1-123-456-7890</li>
-                        <li className='text-[15px] text-[#1e2223] hidden md:block'>admin@Trendify.com</li>
-                    </ul>
-                </div>
-
+        {/* Company Links */}
+        <div className="w-full md:w-[25%] flex flex-col items-center md:items-center gap-2 text-center">
+          <p className="text-sm md:text-[20px] font-semibold text-[#1e2223]">COMPANY</p>
+          <ul className="text-xs md:text-sm text-[#1e2223] space-y-1">
+            <li className="hidden md:block cursor-pointer">Home</li>
+            <li className="cursor-pointer">About us</li>
+            <li className="hidden md:block cursor-pointer">Delivery</li>
+            <li className="cursor-pointer">Privacy Policy</li>
+          </ul>
         </div>
-        <div className='w-[100%] h-[1px] bg-slate-400'></div>
-        <div className='w-[100%] h-[5vh] bg-[#dbfcfcec] flex items-center justify-center'>Trendify 2025@trendify.com-All Rights Reserved</div>
-      
+
+        {/* Contact Info */}
+        <div className="w-full md:w-[25%] flex flex-col items-center md:items-center gap-2 text-center">
+          <p className="text-sm md:text-[20px] font-semibold text-[#1e2223]">GET IN TOUCH</p>
+          <ul className="text-xs md:text-sm text-[#1e2223] space-y-1">
+            <li>+91-7451032320</li>
+            <li>kapilsengar49@gmail.com</li>
+            <li className="hidden md:block">+1-123-456-7890</li>
+            <li className="hidden md:block">admin@Trendify.com</li>
+          </ul>
+        </div>
+
+      </div>
+
+      {/* Divider */}
+      <div className="w-full h-[1px] bg-slate-400 "></div>
+
+      {/* Bottom Note */}
+     <div className="w-full text-center py-3 text-xs md:text-sm text-[#1e2223] bg-[#dbfcfcec] mb-20 md:mb-0">
+  © 2025 Trendify — All Rights Reserved
+</div>
+
     </div>
   )
 }
