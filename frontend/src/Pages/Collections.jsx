@@ -114,7 +114,7 @@ function Collections() {
         </div>
       </div>
       <div className='lg:pl-[20%] md:py-[10px] '>
-        <div className=' md:w-[80vw] w-[100vw]    flex  justify-between flex-col lg:flex-row lg:px-[50px] '>
+        <div className=' md:w-[80vw] w-[100vw]  ml-[15px]  flex  justify-between flex-col lg:flex-row lg:px-[50px] '>
             <Title text1={"ALL"} text2={"COLLECTIONS"}/>
 
             <select name="" id="" className='bg-slate-600 w-[60%] md:w-[200px] h-[50px] px-[10px] text-[white] rounded-lg hover:border-[#46d1f7] border-[2px]' onChange={(e)=>SetSortType(e.target.value)}>
@@ -123,7 +123,7 @@ function Collections() {
                 <option value="high-low" className='w-[100%] h-[100%]'>Sort By: High to Low</option>
             </select>
         </div>
-        <div className='lg:w-[80vw] md:w-[60vw]   w-[100vw] min-h-[70vh] flex items-center justify-center flex-wrap gap-[30px]'>
+        <div className='lg:w-[80vw] md:w-[60vw] mt-[10px]  w-[100vw] min-h-[70vh] flex items-center justify-center flex-wrap gap-[30px]'>
             {
              filterProduct.map((item,index)=>(
                 <Card key={index} id={item._id} name={item.name} price={item.price} image={item.image1}/>
