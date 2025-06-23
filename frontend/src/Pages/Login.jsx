@@ -50,6 +50,7 @@ function Login() {
 
     const googleLogin = async () => {
   try {
+    setLoading(true);
     const response = await signInWithPopup(auth, provider);
     const user = response.user;
     const name = user.displayName;
@@ -69,7 +70,7 @@ function Login() {
     getCurrentUser();
     navigate("/");
     toast.success("Login Successfully")
-
+  setLoading(false);
   } catch (error) {
     console.error("Google signup error:", error.response?.data || error.message);
     toast.error("Login Failed")
