@@ -121,7 +121,7 @@ function ProductDetail() {
 
         <div className='w-[100%] min-h-[70vh] bg-gradient-to-l from-[#141414] to-[#0c2025] flex items-start justify-start flex-col  overflow-x-hidden'>
 
-            <div className='flex px-[20px] mt-[100px] lg:ml-[80px] ml-[0px]  lg:mt-[0px]'>
+            <div className='flex px-[20px] mt-[90px] lg:ml-[80px] ml-[0px]  lg:mt-[0px]'>
 
      <p className='border px-5 py-3 text-sm text-white'>
        Description
