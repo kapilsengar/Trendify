@@ -51,7 +51,7 @@ function Register() {
 
  const googleSignup = async () => {
   try {
-    
+    setLoading(true)
     const response = await signInWithPopup(auth, provider);
     const user = response.user;
     const name = user.displayName;
@@ -59,7 +59,7 @@ function Register() {
 
     // Optional: get Firebase ID token for extra security
     // const idToken = await user.getIdToken();
-      setLoading(true)
+      
     const result = await axios.post(
       serverUrl + "/api/auth/googlelogin",
       { name, email }, // optionally add token
