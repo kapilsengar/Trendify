@@ -1,6 +1,6 @@
 import React from 'react'
 import Title from '../component/Title'
-import about from '../assets/about.jpg'
+import about from '../assets/aboutt.jpg'
 import NewLetterBox from '../component/NewLetterBox'
 
 function About() {
