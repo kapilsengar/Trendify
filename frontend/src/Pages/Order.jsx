@@ -54,7 +54,7 @@ function Order() {
 
               {/* Info Section */}
               <div className='flex flex-col gap-2 text-sm text-[#f3f9fc]'>
-                <p className='text-base md:text-2xl'>{item.name}</p>
+                <p className='text-xs md:text-2xl'>{item.name}</p>
 
                 <div className='flex flex-wrap gap-3 text-xs md:text-lg text-[#aaf4e7]'>
                   <p>{currency} {item.price}</p>
