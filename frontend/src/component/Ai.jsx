@@ -3,10 +3,12 @@ import ai from "../assets/ai.png"
 import { shopDataContext } from '../context/ShopContext'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
+import { userDataContext } from '../context/UserContext'
 import open from "../assets/open.mp3"
 function Ai() {
   let {showSearch , setShowSearch} = useContext(shopDataContext)
   let navigate = useNavigate()
+  let { userData } = useContext(userDataContext)
   let [activeAi,setActiveAi] = useState(false)
   let openingSound = new Audio(open)
 
@@ -24,6 +26,11 @@ window.speechSynthesis.speak(utterence)
 
   recognition.onresult = (e)=>{
     const transcript = e.results[0][0].transcript.trim();
+    if (!userData) {
+      speak("First you have to login");
+      toast.warn("Please login first");
+      return;
+    }
  if(transcript.toLowerCase().includes("search") && transcript.toLowerCase().includes("open") && !showSearch){
       speak("opening search")
       setShowSearch(true) 
