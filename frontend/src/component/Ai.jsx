@@ -73,14 +73,25 @@ window.speechSynthesis.speak(utterence)
    setActiveAi(false)
   }
   return (
-    <div className='fixed lg:bottom-[20px] md:bottom-[40px] bottom-[80px] left-[2%] ' onClick={()=>{recognition.start();
-    openingSound.play()
-    setActiveAi(true)
-    }}>
-      <img src={ai} alt="" className={`w-[100px] cursor-pointer ${activeAi ? 'translate-x-[10%] translate-y-[-10%] scale-125 ' : 'translate-x-[0] translate-y-[0] scale-100'} transition-transform` } style={{
-        filter: ` ${activeAi?"drop-shadow(0px 0px 30px #00d2fc)":"drop-shadow(0px 0px 20px black)"}`
-      }}/>
-    </div>
+    <div
+  className='fixed lg:bottom-[20px] md:bottom-[80px] bottom-[80px] left-[2%]'
+  onClick={() => {
+    recognition.start();
+    openingSound.play();
+    setActiveAi(true);
+  }}
+>
+  <img
+    src={ai}
+    alt=""
+    className={`w-[50px] mb-[20px] md:w-[70px] lg:w-[100px] cursor-pointer ${
+      activeAi ? 'translate-x-[10%] translate-y-[-10%] scale-125' : 'translate-x-[0] translate-y-[0] scale-100'
+    } transition-transform`}
+    style={{
+      filter: `${activeAi ? 'drop-shadow(0px 0px 30px #00d2fc)' : 'drop-shadow(0px 0px 20px black)'}`,
+    }}
+  />
+</div>
   )
 }
 
