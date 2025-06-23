@@ -107,10 +107,20 @@ function Register() {
           onSubmit={handleSignup}
           className="w-[90%] h-[90%] flex flex-col items-center justify-start gap-[20px]"
         >
-          <div className="w-[90%] h-[50px] bg-[#42656cae] rounded-lg flex items-center justify-center gap-[10px] py-[20px] cursor-pointer"  onClick={googleSignup}>
-            <img src={google} alt="" className="w-[20px]" /> Registration with
-            Google
-          </div>
+          <div
+  className="w-[90%] h-[50px] bg-[#42656cae] rounded-lg flex items-center justify-center gap-[10px] py-[20px] cursor-pointer"
+  onClick={googleLogin}
+>
+  {loading ? (
+    <Loading />
+  ) : (
+    <>
+      <img src={google} alt="" className="w-[20px]" />
+      Registration with Google
+    </>
+  )}
+</div>
+
 
           <div className="w-[100%] h-[20px] flex items-center justify-center gap-[10px]">
             <div className="w-[40%] h-[1px] bg-[#96969635]"></div> OR{" "}
